@@ -1,4 +1,4 @@
-function dp = system_transform(cp,T,c0)
+function dp = system_transform(cp,T)
     %cp: 3x1 point (3xN)
     %T: transformation_matrix object describing new cs orientation
     %c0: 3x1 point describing rotation axis

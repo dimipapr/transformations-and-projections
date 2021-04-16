@@ -11,8 +11,7 @@ classdef transformation_matrix
             %FORMATION_MATRIX Construct an instance of this class
             %   Detailed explanation goes here
             obj.T = eye(4);
-        end
-        
+        end        
         function obj=rotate(obj, theta, u)
             %theta: angle (radians)
             %u : 3x1 axis of rotation vector (unitary?)
