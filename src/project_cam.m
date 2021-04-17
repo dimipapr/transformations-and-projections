@@ -5,10 +5,9 @@ function [P, D] = project_cam(w, cv, cx, cy, cz, p)
     %w: apostasi petasmatos   
     cam = transformation_matrix;
     cam.T(1:3,1:4)=[cx cy cz cv];
-    invcam
     i=1:size(p,2);
-    pn=affine_transform(p,inv(cam));
-    P = pn(1:2,i)*w/pn(3,i);
+    pn=system_transform(p,cam);
+    P = pn(1:2,i)*w./pn(3,i);
     D = pn(3,i);
 end
 
