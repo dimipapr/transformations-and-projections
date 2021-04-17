@@ -21,24 +21,24 @@ if strcmp(renderer, 'flat')
         v_2d = [vertices_2d(faces(i,1),:) ;vertices_2d(faces(i,2),:) ;vertices_2d(faces(i,3),:)];
         v_c = [vertex_colors(faces(i,1),:) ;vertex_colors(faces(i,2),:); vertex_colors(faces(i,3),:)];
         Img = paint_triangle_flat(Img, v_2d, v_c);
-        if mod(i,1000)==0
-
-            waitbar(i/m)
-           
-
-        end
+%         if mod(i,1000)==0
+% 
+%             waitbar(i/m)
+%            
+% 
+%         end
     end
 elseif strcmp(renderer, 'gouraud')
     for i=1:m
         v_2d = [vertices_2d(faces(i,1),:) ;vertices_2d(faces(i,2),:) ;vertices_2d(faces(i,3),:)];
         v_c = [vertex_colors(faces(i,1),:) ;vertex_colors(faces(i,2),:); vertex_colors(faces(i,3),:)];
         Img = paint_triangle_gouraud(Img, v_2d, v_c);
-        if mod(i,1000)==0
-
-            waitbar(i/m)
-            imshow(Img)
-
-        end
+%         if mod(i,1000)==0
+% 
+%             waitbar(i/m)
+%             imshow(Img)
+% 
+%         end
     end
 else
     error('incorect renderer argument. Options: flat | gouraud')
