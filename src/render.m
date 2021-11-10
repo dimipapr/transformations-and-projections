@@ -6,6 +6,7 @@ function [Img] = render(vertices_2d, faces, vertex_colors, depth, renderer)
 %       vertex_colors: Lx3, RGB components of each vertex
 %       renderer: (Flat, Gouraud)
 
+
 m = size(faces,1);
 Img = ones(1200,1200,3);
 %calculate depth for each face
